@@ -64,6 +64,9 @@ jobs:
         run: ls
       - name: Deploy site
         uses: ./github/actions/deploy-s3-javascript
+        env:
+          AWS_ACCESS_KEY_ID: sd
+          AWS_SECRET_ACCESS_KEY: sd
         with:
           bucket: gha-custom-action-hosting
           dist-folder: ./dist
